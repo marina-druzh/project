@@ -1,3 +1,2 @@
 # project
-first project
-yy
+Задачи по 3-му уроку
