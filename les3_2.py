@@ -5,14 +5,9 @@
 Реализовать вывод данных о пользователе одной строкой.
 '''
 
-
 def my_info(**kwargs):
-    name = input('Введите имя  ')
-    s_name = input('Введите фамилию  ')
-    year = input('Укажите свой год рождения  ')
-    my_city = input('Введите свой город проживания  ')
-    email = input('Введите свой email  ')
-    info = [str(name), str(s_name), str(year), str(my_city), str(email)]
+    return ' '.join(kwargs.values())
 
-print(* info)
-#   return f"{name} {s_name} {year} года рождения из города {my_city}, email: {email}"
+print("Персональные данные:", my_info(name=input("Введите имя  "), s_name=input("Введите фамилию  "),
+      year=input("Укажите свой год рождения  "), my_city=input("Введите свой город проживания  "), email=input("Введите свой email  ")))
+
