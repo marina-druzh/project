@@ -1,27 +1,10 @@
-'''
-Реализовать генератор с помощью функции с ключевым словом yield,
-создающим очередное значение. При вызове функции должен
-создаваться объект-генератор. Функция вызывается следующим образом:
-for el in fact(n). Она отвечает за получение факториала числа. В цикле
-нужно выводить только первые n чисел, начиная с 1! и до n!.
-'''
-# Вариант с reduce, но без проверки на возможные ошибки программы
-# from functools import reduce
-# def my_func(prev_el, el):
-#     return prev_el * el
-#
-# print(reduce(my_func, [el for el in range(1, int(input('введите число, факториал которого, '
-#                                                        'нужно рассчитать  ')) + 1)]))
-
-# 2-ой вариант
-def fact_gen(k):
-    fact = 1
-    if k == 0:
-        yield f'{k}! = 1'
-    for i in range(1, k + 1):
-        fact *= i
-        yield f'{i}! = {fact}'
+from functools import reduce
 
 
-for el in fact_gen(int(input('Введите номер факториала: '))):
-    print(el)
+def my_func(prev_el, el):
+    return prev_el * el
+
+
+print(reduce(my_func, [el for el in range(100, 1001, 2)]))
+
+
