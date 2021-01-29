@@ -1,2 +1,2 @@
 # project
-first project
+Задачи по 3-му уроку
